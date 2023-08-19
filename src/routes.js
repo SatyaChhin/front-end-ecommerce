@@ -2,6 +2,7 @@
 import React, { Component }  from 'react';
 import Dashboard from "views/Dashboard/Dashboard.js";
 import Tables from "views/Dashboard/Tables.js";
+import Product from "views/Dashboard/Product.js";
 import Billing from "views/Dashboard/Billing.js";
 import RTLPage from "views/RTL/RTLPage.js";
 import Profile from "views/Dashboard/Profile.js";
@@ -25,6 +26,14 @@ var dashRoutes = [
     rtlName: "لوحة القيادة",
     icon: <HomeIcon color='inherit' />,
     component: Dashboard,
+    layout: "/admin",
+  },
+  {
+    path: "/product",
+    name: "Product",
+    rtlName: "لوحة القيادة",
+    icon: <StatsIcon color='inherit' />,
+    component: Product,
     layout: "/admin",
   },
   {
