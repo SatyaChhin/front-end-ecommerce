@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
-function TablesTableRow(props) {
+function ProductsTableRow(props) {
   const {id , image, name, email, Product_type, price , date , Barcode , Create_at , isLast } = props;
   const textColor = useColorModeValue("gray.500", "white");
   const titleColor = useColorModeValue("gray.700", "white");
@@ -19,7 +19,8 @@ function TablesTableRow(props) {
   const borderColor = useColorModeValue("gray.200", "gray.600");
 
   return (
-    <Tr>
+    <>
+      <Tr>
        <Td borderColor={borderColor} borderBottom={isLast ? "none" : null}>
         <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
           {id}
@@ -51,7 +52,7 @@ function TablesTableRow(props) {
 
       <Td borderColor={borderColor} borderBottom={isLast ? "none" : null}>
       <Badge
-          bg={Product_type === "ទំនិញថ្មី" ? bgStatus : "red.400"}
+          bg={Product_type === "new" ? bgStatus : "red.400"}
           color={Product_type === "Online" ? "white" : "white"}
           fontSize="16px"
           p="3px 10px"
@@ -96,10 +97,11 @@ function TablesTableRow(props) {
           >
             Edit
           </Text>
-        </Button>
+        </Button> 
       </Td>
-    </Tr>
+      </Tr>
+    </>
   );
 }
 
-export default TablesTableRow;
+export default ProductsTableRow;
